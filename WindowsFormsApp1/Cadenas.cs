@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             lblalfabeto.Text = alfabetoseleccionado;
             pnlalfabeto.Visible = false;
             pnlalfabetoseleccionado.Visible = true;
+            pnlmenucadenas.Visible = true;
             alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
             alfabetonumerico = alfabetoss.obtenerAlfabeto("Num");
         }
@@ -47,8 +48,9 @@ namespace WindowsFormsApp1
             lblalfabeto.Text = alfabetoseleccionado;
             pnlalfabeto.Visible = false;
             pnlalfabetoseleccionado.Visible = true;
-            char[] alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
-            char[] alfabetonumerico = alfabetoss.obtenerAlfabeto("Num");
+            pnlmenucadenas.Visible = true;
+            alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
+            alfabetonumerico = alfabetoss.obtenerAlfabeto("Num");
         }
 
         private void lblalfabeto_Click(object sender, EventArgs e)
@@ -78,7 +80,18 @@ namespace WindowsFormsApp1
 
         private void btnalfabetochange_Click(object sender, EventArgs e)
         {
-
+            pnlalfabeto.Visible = true;
+            pnlmenucadenas.Visible = false;
+            pnlconcatenacion.Visible = false;
+            pnllongitud.Visible = false;
+            pnlpotencia.Visible = false;
+            pnlinversa.Visible = false;
+            txtinversa.Text = string.Empty;
+            txtpotencia.Text = string.Empty;
+            txtlongitud.Text = string.Empty;
+            txtchain1.Text = string.Empty;
+            txtchain2.Text = string.Empty;
+            txtexponente.Text = "1";
         }
 
         private void btncalclong_Click(object sender, EventArgs e)
@@ -98,9 +111,9 @@ namespace WindowsFormsApp1
             }
             else if (potencia > 0)
             {
-               string cadenaoriginal = txtpotencia.Text;
+                string cadenaoriginal = txtpotencia.Text;
 
-                for(int n = 1; n<= potencia; n++)
+                for (int n = 1; n <= potencia; n++)
                 {
                     cadenaresultado += cadenaoriginal;
                 }
@@ -110,7 +123,7 @@ namespace WindowsFormsApp1
                 cadenaresultado = "Inválido";
             }
 
-                lblpotencia.Text = cadenaresultado;
+            lblpotencia.Text = cadenaresultado;
         }
 
         private void btnback_Click(object sender, EventArgs e)
@@ -123,7 +136,7 @@ namespace WindowsFormsApp1
         private void txtexponente_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -132,7 +145,7 @@ namespace WindowsFormsApp1
         private void txtpotencia_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -141,7 +154,7 @@ namespace WindowsFormsApp1
         private void txtinversa_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -150,7 +163,7 @@ namespace WindowsFormsApp1
         private void txtlongitud_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -159,7 +172,7 @@ namespace WindowsFormsApp1
         private void txtchain2_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -168,7 +181,7 @@ namespace WindowsFormsApp1
         private void txtchain1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ingresado = char.ToUpper(e.KeyChar);
-            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado))
             {
                 e.Handled = true;
             }
@@ -176,7 +189,87 @@ namespace WindowsFormsApp1
 
         private void btnconcat_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtchain1.Text) && string.IsNullOrEmpty(txtchain2.Text))
+            {
+                lblconcat.Text = "λ";
+                return;
+            }
             lblconcat.Text = txtchain1.Text + txtchain2.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pnlmenucadenas.Visible = false;
+            pnllongitud.Visible = true;
+        }
+
+        private void btnconcatenacion_Click(object sender, EventArgs e)
+        {
+            pnlmenucadenas.Visible = false;
+            pnlconcatenacion.Visible = true;
+        }
+
+        private void btnpotencia_Click(object sender, EventArgs e)
+        {
+            pnlmenucadenas.Visible = false;
+            pnlpotencia.Visible = true;
+        }
+
+        private void btninversa_Click(object sender, EventArgs e)
+        {
+            pnlmenucadenas.Visible = false;
+            pnlinversa.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pnlinversa.Visible = false;
+            pnlmenucadenas.Visible = true;
+            txtinversa.Text = string.Empty;
+            lblinversa.Text = "N/A";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            pnlpotencia.Visible = false;
+            pnlmenucadenas.Visible = true;
+            txtpotencia.Text = string.Empty;
+            txtexponente.Text = "1";
+            lblpotencia.Text = "N/A";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pnllongitud.Visible = false;
+            pnlmenucadenas.Visible = true;
+            txtlongitud.Text = string.Empty;
+            lbllong.Text = "N/A";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            pnlconcatenacion.Visible = false;
+            pnlmenucadenas.Visible = true;
+            txtchain1.Text = string.Empty;
+            txtchain2.Text = string.Empty;
+            lblconcat.Text = "N/A";
+        }
+
+        private void btncalcinv_Click(object sender, EventArgs e)
+        {
+            string textooriginal = txtinversa.Text;
+
+            if (string.IsNullOrEmpty(textooriginal))
+            {
+                lblinversa.Text = "λ";
+            }
+            else
+            {
+                char[] caracteres = textooriginal.ToCharArray();
+                Array.Reverse(caracteres);
+                string textoinverso = new string(caracteres);
+                lblinversa.Text = textoinverso;
+            }
         }
     }
 }

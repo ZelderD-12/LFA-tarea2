@@ -64,6 +64,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtlongitud = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.pnlmenucadenas.SuspendLayout();
             this.pnlalfabeto.SuspendLayout();
             this.pnlalfabetoseleccionado.SuspendLayout();
@@ -75,98 +79,132 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 21);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.Location = new System.Drawing.Point(18, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(218, 55);
             this.button1.TabIndex = 0;
             this.button1.Text = "Longitud";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnconcatenacion
             // 
-            this.btnconcatenacion.Location = new System.Drawing.Point(39, 93);
+            this.btnconcatenacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnconcatenacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconcatenacion.Font = new System.Drawing.Font("Ravie", 12F);
+            this.btnconcatenacion.ForeColor = System.Drawing.Color.Yellow;
+            this.btnconcatenacion.Location = new System.Drawing.Point(18, 102);
             this.btnconcatenacion.Name = "btnconcatenacion";
-            this.btnconcatenacion.Size = new System.Drawing.Size(115, 23);
+            this.btnconcatenacion.Size = new System.Drawing.Size(218, 58);
             this.btnconcatenacion.TabIndex = 1;
             this.btnconcatenacion.Text = "Concatenación";
-            this.btnconcatenacion.UseVisualStyleBackColor = true;
+            this.btnconcatenacion.UseVisualStyleBackColor = false;
+            this.btnconcatenacion.Click += new System.EventHandler(this.btnconcatenacion_Click);
             // 
             // btnpotencia
             // 
-            this.btnpotencia.Location = new System.Drawing.Point(39, 157);
+            this.btnpotencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnpotencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnpotencia.Font = new System.Drawing.Font("Ravie", 12F);
+            this.btnpotencia.ForeColor = System.Drawing.Color.Yellow;
+            this.btnpotencia.Location = new System.Drawing.Point(18, 186);
             this.btnpotencia.Name = "btnpotencia";
-            this.btnpotencia.Size = new System.Drawing.Size(75, 23);
+            this.btnpotencia.Size = new System.Drawing.Size(218, 53);
             this.btnpotencia.TabIndex = 2;
             this.btnpotencia.Text = "Potencia";
-            this.btnpotencia.UseVisualStyleBackColor = true;
+            this.btnpotencia.UseVisualStyleBackColor = false;
+            this.btnpotencia.Click += new System.EventHandler(this.btnpotencia_Click);
             // 
             // btninversa
             // 
-            this.btninversa.Location = new System.Drawing.Point(39, 235);
+            this.btninversa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btninversa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btninversa.Font = new System.Drawing.Font("Ravie", 12F);
+            this.btninversa.ForeColor = System.Drawing.Color.Yellow;
+            this.btninversa.Location = new System.Drawing.Point(49, 260);
             this.btninversa.Name = "btninversa";
-            this.btninversa.Size = new System.Drawing.Size(75, 23);
+            this.btninversa.Size = new System.Drawing.Size(144, 59);
             this.btninversa.TabIndex = 3;
             this.btninversa.Text = "Inversa";
-            this.btninversa.UseVisualStyleBackColor = true;
+            this.btninversa.UseVisualStyleBackColor = false;
+            this.btninversa.Click += new System.EventHandler(this.btninversa_Click);
             // 
             // pnlmenucadenas
             // 
+            this.pnlmenucadenas.BackColor = System.Drawing.Color.Teal;
             this.pnlmenucadenas.Controls.Add(this.btninversa);
             this.pnlmenucadenas.Controls.Add(this.button1);
             this.pnlmenucadenas.Controls.Add(this.btnpotencia);
             this.pnlmenucadenas.Controls.Add(this.btnconcatenacion);
             this.pnlmenucadenas.Location = new System.Drawing.Point(39, 83);
             this.pnlmenucadenas.Name = "pnlmenucadenas";
-            this.pnlmenucadenas.Size = new System.Drawing.Size(231, 319);
+            this.pnlmenucadenas.Size = new System.Drawing.Size(260, 352);
             this.pnlmenucadenas.TabIndex = 4;
             this.pnlmenucadenas.Visible = false;
             // 
             // pnlalfabeto
             // 
+            this.pnlalfabeto.BackColor = System.Drawing.Color.Teal;
             this.pnlalfabeto.Controls.Add(this.label1);
             this.pnlalfabeto.Controls.Add(this.button3);
             this.pnlalfabeto.Controls.Add(this.button2);
             this.pnlalfabeto.Location = new System.Drawing.Point(337, 176);
             this.pnlalfabeto.Name = "pnlalfabeto";
-            this.pnlalfabeto.Size = new System.Drawing.Size(335, 219);
+            this.pnlalfabeto.Size = new System.Drawing.Size(419, 274);
             this.pnlalfabeto.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(16, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 16);
+            this.label1.Size = new System.Drawing.Size(620, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "¿Qué alfabeto deseas usar para tus operaciones?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button3.ForeColor = System.Drawing.Color.Yellow;
             this.button3.Location = new System.Drawing.Point(101, 82);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 35);
+            this.button3.Size = new System.Drawing.Size(141, 54);
             this.button3.TabIndex = 6;
             this.button3.Text = "Español";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
             this.button2.Location = new System.Drawing.Point(101, 155);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 34);
+            this.button2.Size = new System.Drawing.Size(141, 44);
             this.button2.TabIndex = 6;
             this.button2.Text = "Inglés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbldefault
             // 
             this.lbldefault.AutoSize = true;
-            this.lbldefault.Location = new System.Drawing.Point(26, 25);
+            this.lbldefault.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldefault.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbldefault.Location = new System.Drawing.Point(26, 28);
             this.lbldefault.Name = "lbldefault";
-            this.lbldefault.Size = new System.Drawing.Size(174, 16);
+            this.lbldefault.Size = new System.Drawing.Size(348, 29);
             this.lbldefault.TabIndex = 6;
             this.lbldefault.Text = "El alfabeto seleccionado es";
             this.lbldefault.Click += new System.EventHandler(this.label2_Click);
@@ -174,83 +212,105 @@
             // lblalfabeto
             // 
             this.lblalfabeto.AutoSize = true;
-            this.lblalfabeto.Location = new System.Drawing.Point(222, 25);
+            this.lblalfabeto.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblalfabeto.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.lblalfabeto.Location = new System.Drawing.Point(266, 31);
             this.lblalfabeto.Name = "lblalfabeto";
-            this.lblalfabeto.Size = new System.Drawing.Size(30, 16);
+            this.lblalfabeto.Size = new System.Drawing.Size(73, 35);
             this.lblalfabeto.TabIndex = 7;
             this.lblalfabeto.Text = "N/A";
             this.lblalfabeto.Click += new System.EventHandler(this.lblalfabeto_Click);
             // 
             // pnlalfabetoseleccionado
             // 
+            this.pnlalfabetoseleccionado.BackColor = System.Drawing.Color.Teal;
             this.pnlalfabetoseleccionado.Controls.Add(this.btnalfabetochange);
             this.pnlalfabetoseleccionado.Controls.Add(this.lbldefault);
             this.pnlalfabetoseleccionado.Controls.Add(this.lblalfabeto);
-            this.pnlalfabetoseleccionado.Location = new System.Drawing.Point(327, 12);
+            this.pnlalfabetoseleccionado.Location = new System.Drawing.Point(409, 15);
             this.pnlalfabetoseleccionado.Name = "pnlalfabetoseleccionado";
-            this.pnlalfabetoseleccionado.Size = new System.Drawing.Size(425, 65);
+            this.pnlalfabetoseleccionado.Size = new System.Drawing.Size(531, 81);
             this.pnlalfabetoseleccionado.TabIndex = 8;
             this.pnlalfabetoseleccionado.Visible = false;
             // 
             // btnalfabetochange
             // 
-            this.btnalfabetochange.Location = new System.Drawing.Point(281, 11);
+            this.btnalfabetochange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnalfabetochange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnalfabetochange.Font = new System.Drawing.Font("Ravie", 12F);
+            this.btnalfabetochange.ForeColor = System.Drawing.Color.Yellow;
+            this.btnalfabetochange.Location = new System.Drawing.Point(351, 14);
             this.btnalfabetochange.Name = "btnalfabetochange";
             this.btnalfabetochange.Size = new System.Drawing.Size(127, 45);
             this.btnalfabetochange.TabIndex = 8;
             this.btnalfabetochange.Text = "Cambiar Alfabeto";
-            this.btnalfabetochange.UseVisualStyleBackColor = true;
+            this.btnalfabetochange.UseVisualStyleBackColor = false;
             this.btnalfabetochange.Click += new System.EventHandler(this.btnalfabetochange_Click);
             // 
             // pnlinversa
             // 
+            this.pnlinversa.BackColor = System.Drawing.Color.Teal;
+            this.pnlinversa.Controls.Add(this.button4);
             this.pnlinversa.Controls.Add(this.btncalcinv);
             this.pnlinversa.Controls.Add(this.lblinversa);
             this.pnlinversa.Controls.Add(this.label2);
             this.pnlinversa.Controls.Add(this.txtinversa);
-            this.pnlinversa.Location = new System.Drawing.Point(758, 37);
+            this.pnlinversa.Location = new System.Drawing.Point(948, 46);
             this.pnlinversa.Name = "pnlinversa";
-            this.pnlinversa.Size = new System.Drawing.Size(579, 210);
+            this.pnlinversa.Size = new System.Drawing.Size(724, 263);
             this.pnlinversa.TabIndex = 9;
+            this.pnlinversa.Visible = false;
             // 
             // btncalcinv
             // 
+            this.btncalcinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btncalcinv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncalcinv.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalcinv.ForeColor = System.Drawing.Color.Yellow;
             this.btncalcinv.Location = new System.Drawing.Point(394, 74);
             this.btncalcinv.Name = "btncalcinv";
             this.btncalcinv.Size = new System.Drawing.Size(153, 65);
             this.btncalcinv.TabIndex = 5;
             this.btncalcinv.Text = "Obtener Inversa";
-            this.btncalcinv.UseVisualStyleBackColor = true;
+            this.btncalcinv.UseVisualStyleBackColor = false;
+            this.btncalcinv.Click += new System.EventHandler(this.btncalcinv_Click);
             // 
             // lblinversa
             // 
             this.lblinversa.AutoSize = true;
+            this.lblinversa.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinversa.ForeColor = System.Drawing.Color.NavajoWhite;
             this.lblinversa.Location = new System.Drawing.Point(74, 139);
             this.lblinversa.Name = "lblinversa";
-            this.lblinversa.Size = new System.Drawing.Size(30, 16);
+            this.lblinversa.Size = new System.Drawing.Size(73, 35);
             this.lblinversa.TabIndex = 4;
             this.lblinversa.Text = "N/A";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 24);
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(180, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 16);
+            this.label2.Size = new System.Drawing.Size(563, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ingrese una cadena para obtener su inversa";
             // 
             // txtinversa
             // 
+            this.txtinversa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtinversa.Location = new System.Drawing.Point(43, 82);
             this.txtinversa.Name = "txtinversa";
-            this.txtinversa.Size = new System.Drawing.Size(236, 22);
+            this.txtinversa.Size = new System.Drawing.Size(369, 40);
             this.txtinversa.TabIndex = 2;
             this.txtinversa.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtinversa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtinversa_KeyPress);
             // 
             // pnlpotencia
             // 
+            this.pnlpotencia.BackColor = System.Drawing.Color.Teal;
+            this.pnlpotencia.Controls.Add(this.button7);
             this.pnlpotencia.Controls.Add(this.txtexponente);
             this.pnlpotencia.Controls.Add(this.btncalcpot);
             this.pnlpotencia.Controls.Add(this.lblpotencia);
@@ -258,34 +318,42 @@
             this.pnlpotencia.Controls.Add(this.txtpotencia);
             this.pnlpotencia.Location = new System.Drawing.Point(758, 265);
             this.pnlpotencia.Name = "pnlpotencia";
-            this.pnlpotencia.Size = new System.Drawing.Size(579, 218);
+            this.pnlpotencia.Size = new System.Drawing.Size(724, 273);
             this.pnlpotencia.TabIndex = 0;
+            this.pnlpotencia.Visible = false;
             // 
             // txtexponente
             // 
+            this.txtexponente.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtexponente.Location = new System.Drawing.Point(325, 88);
             this.txtexponente.Name = "txtexponente";
-            this.txtexponente.Size = new System.Drawing.Size(48, 22);
+            this.txtexponente.Size = new System.Drawing.Size(75, 40);
             this.txtexponente.TabIndex = 7;
             this.txtexponente.Text = "1";
             this.txtexponente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtexponente_KeyPress);
             // 
             // btncalcpot
             // 
-            this.btncalcpot.Location = new System.Drawing.Point(394, 30);
+            this.btncalcpot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btncalcpot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncalcpot.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalcpot.ForeColor = System.Drawing.Color.Yellow;
+            this.btncalcpot.Location = new System.Drawing.Point(394, 122);
             this.btncalcpot.Name = "btncalcpot";
             this.btncalcpot.Size = new System.Drawing.Size(163, 68);
             this.btncalcpot.TabIndex = 6;
             this.btncalcpot.Text = "Obtener Potencia";
-            this.btncalcpot.UseVisualStyleBackColor = true;
+            this.btncalcpot.UseVisualStyleBackColor = false;
             this.btncalcpot.Click += new System.EventHandler(this.btncalcpot_Click);
             // 
             // lblpotencia
             // 
             this.lblpotencia.AutoSize = true;
+            this.lblpotencia.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpotencia.ForeColor = System.Drawing.Color.NavajoWhite;
             this.lblpotencia.Location = new System.Drawing.Point(144, 135);
             this.lblpotencia.Name = "lblpotencia";
-            this.lblpotencia.Size = new System.Drawing.Size(30, 16);
+            this.lblpotencia.Size = new System.Drawing.Size(73, 35);
             this.lblpotencia.TabIndex = 5;
             this.lblpotencia.Text = "N/A";
             this.lblpotencia.Click += new System.EventHandler(this.lblpotencia_Click);
@@ -293,23 +361,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 34);
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(189, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 16);
+            this.label3.Size = new System.Drawing.Size(576, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingrese una cadena para obtener su potencia";
             // 
             // txtpotencia
             // 
+            this.txtpotencia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpotencia.Location = new System.Drawing.Point(43, 78);
             this.txtpotencia.Name = "txtpotencia";
-            this.txtpotencia.Size = new System.Drawing.Size(254, 22);
+            this.txtpotencia.Size = new System.Drawing.Size(398, 40);
             this.txtpotencia.TabIndex = 0;
             this.txtpotencia.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtpotencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpotencia_KeyPress);
             // 
             // pnlconcatenacion
             // 
+            this.pnlconcatenacion.BackColor = System.Drawing.Color.Teal;
+            this.pnlconcatenacion.Controls.Add(this.button6);
             this.pnlconcatenacion.Controls.Add(this.lblconcat);
             this.pnlconcatenacion.Controls.Add(this.label5);
             this.pnlconcatenacion.Controls.Add(this.btnconcat);
@@ -317,116 +390,200 @@
             this.pnlconcatenacion.Controls.Add(this.txtchain1);
             this.pnlconcatenacion.Location = new System.Drawing.Point(39, 449);
             this.pnlconcatenacion.Name = "pnlconcatenacion";
-            this.pnlconcatenacion.Size = new System.Drawing.Size(410, 247);
+            this.pnlconcatenacion.Size = new System.Drawing.Size(513, 309);
             this.pnlconcatenacion.TabIndex = 10;
+            this.pnlconcatenacion.Visible = false;
             // 
             // lblconcat
             // 
             this.lblconcat.AutoSize = true;
-            this.lblconcat.Location = new System.Drawing.Point(158, 193);
+            this.lblconcat.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconcat.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.lblconcat.Location = new System.Drawing.Point(198, 241);
             this.lblconcat.Name = "lblconcat";
-            this.lblconcat.Size = new System.Drawing.Size(38, 20);
+            this.lblconcat.Size = new System.Drawing.Size(73, 35);
             this.lblconcat.TabIndex = 15;
             this.lblconcat.Text = "N/A";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(88, 33);
+            this.label5.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(180, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 16);
+            this.label5.Size = new System.Drawing.Size(338, 29);
             this.label5.TabIndex = 14;
             this.label5.Text = "Ingrese las cadenas a unir";
             // 
             // btnconcat
             // 
-            this.btnconcat.Location = new System.Drawing.Point(113, 139);
+            this.btnconcat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnconcat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconcat.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconcat.ForeColor = System.Drawing.Color.Yellow;
+            this.btnconcat.Location = new System.Drawing.Point(96, 174);
             this.btnconcat.Name = "btnconcat";
-            this.btnconcat.Size = new System.Drawing.Size(118, 23);
+            this.btnconcat.Size = new System.Drawing.Size(183, 38);
             this.btnconcat.TabIndex = 13;
             this.btnconcat.Text = "Concatenar";
-            this.btnconcat.UseVisualStyleBackColor = true;
+            this.btnconcat.UseVisualStyleBackColor = false;
             this.btnconcat.Click += new System.EventHandler(this.btnconcat_Click);
             // 
             // txtchain2
             // 
-            this.txtchain2.Location = new System.Drawing.Point(208, 71);
+            this.txtchain2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtchain2.Location = new System.Drawing.Point(260, 89);
             this.txtchain2.Name = "txtchain2";
-            this.txtchain2.Size = new System.Drawing.Size(100, 22);
+            this.txtchain2.Size = new System.Drawing.Size(195, 40);
             this.txtchain2.TabIndex = 12;
             this.txtchain2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchain2_KeyPress);
             // 
             // txtchain1
             // 
-            this.txtchain1.Location = new System.Drawing.Point(39, 71);
+            this.txtchain1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtchain1.Location = new System.Drawing.Point(49, 89);
             this.txtchain1.Name = "txtchain1";
-            this.txtchain1.Size = new System.Drawing.Size(100, 22);
+            this.txtchain1.Size = new System.Drawing.Size(195, 40);
             this.txtchain1.TabIndex = 11;
             this.txtchain1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchain1_KeyPress);
             // 
             // pnllongitud
             // 
+            this.pnllongitud.BackColor = System.Drawing.Color.Teal;
+            this.pnllongitud.Controls.Add(this.button5);
             this.pnllongitud.Controls.Add(this.btncalclong);
             this.pnllongitud.Controls.Add(this.lbllong);
             this.pnllongitud.Controls.Add(this.label4);
             this.pnllongitud.Controls.Add(this.txtlongitud);
-            this.pnllongitud.Location = new System.Drawing.Point(504, 506);
+            this.pnllongitud.Location = new System.Drawing.Point(1032, 640);
             this.pnllongitud.Name = "pnllongitud";
-            this.pnllongitud.Size = new System.Drawing.Size(512, 190);
+            this.pnllongitud.Size = new System.Drawing.Size(640, 238);
             this.pnllongitud.TabIndex = 0;
+            this.pnllongitud.Visible = false;
             // 
             // btncalclong
             // 
-            this.btncalclong.Location = new System.Drawing.Point(326, 82);
+            this.btncalclong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btncalclong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncalclong.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncalclong.ForeColor = System.Drawing.Color.Yellow;
+            this.btncalclong.Location = new System.Drawing.Point(434, 147);
             this.btncalclong.Name = "btncalclong";
-            this.btncalclong.Size = new System.Drawing.Size(158, 38);
+            this.btncalclong.Size = new System.Drawing.Size(158, 81);
             this.btncalclong.TabIndex = 7;
             this.btncalclong.Text = "Obtener Longitud";
-            this.btncalclong.UseVisualStyleBackColor = true;
+            this.btncalclong.UseVisualStyleBackColor = false;
             this.btncalclong.Click += new System.EventHandler(this.btncalclong_Click);
             // 
             // lbllong
             // 
             this.lbllong.AutoSize = true;
-            this.lbllong.Location = new System.Drawing.Point(234, 147);
+            this.lbllong.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllong.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.lbllong.Location = new System.Drawing.Point(190, 159);
             this.lbllong.Name = "lbllong";
-            this.lbllong.Size = new System.Drawing.Size(30, 16);
+            this.lbllong.Size = new System.Drawing.Size(58, 28);
             this.lbllong.TabIndex = 6;
             this.lbllong.Text = "N/A";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(121, 33);
+            this.label4.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(192, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(273, 16);
+            this.label4.Size = new System.Drawing.Size(576, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Ingrese una cadena para obtener su longitud";
             // 
             // txtlongitud
             // 
+            this.txtlongitud.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlongitud.Location = new System.Drawing.Point(61, 84);
             this.txtlongitud.Name = "txtlongitud";
-            this.txtlongitud.Size = new System.Drawing.Size(232, 22);
+            this.txtlongitud.Size = new System.Drawing.Size(540, 32);
             this.txtlongitud.TabIndex = 1;
             this.txtlongitud.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtlongitud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtlongitud_KeyPress);
             // 
             // btnback
             // 
+            this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnback.Font = new System.Drawing.Font("Ravie", 12F);
+            this.btnback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnback.Location = new System.Drawing.Point(40, 12);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(113, 41);
+            this.btnback.Size = new System.Drawing.Size(138, 56);
             this.btnback.TabIndex = 8;
             this.btnback.Text = "Regresar";
-            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button4.Location = new System.Drawing.Point(20, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 36);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Volver";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button5.Location = new System.Drawing.Point(19, 29);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(120, 36);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Volver";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button6.Location = new System.Drawing.Point(18, 15);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(120, 36);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Volver";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Ravie", 12F);
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button7.Location = new System.Drawing.Point(20, 21);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(120, 36);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Volver";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Cadenas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1519, 758);
+            this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.ClientSize = new System.Drawing.Size(1831, 899);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.pnllongitud);
             this.Controls.Add(this.pnlconcatenacion);
@@ -492,5 +649,9 @@
         private System.Windows.Forms.TextBox txtchain2;
         private System.Windows.Forms.TextBox txtchain1;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
