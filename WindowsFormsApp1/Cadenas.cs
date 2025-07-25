@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     {
         Alfabetos alfabetoss = new Alfabetos();
         string alfabetoseleccionado = "";
+        char[] alfabeto;
+        char[] alfabetonumerico;
         public Cadenas()
         {
             InitializeComponent();
@@ -30,7 +32,8 @@ namespace WindowsFormsApp1
             lblalfabeto.Text = alfabetoseleccionado;
             pnlalfabeto.Visible = false;
             pnlalfabetoseleccionado.Visible = true;
-            char[] alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
+            alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
+            alfabetonumerico = alfabetoss.obtenerAlfabeto("Num");
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,6 +48,7 @@ namespace WindowsFormsApp1
             pnlalfabeto.Visible = false;
             pnlalfabetoseleccionado.Visible = true;
             char[] alfabeto = alfabetoss.obtenerAlfabeto(alfabetoseleccionado);
+            char[] alfabetonumerico = alfabetoss.obtenerAlfabeto("Num");
         }
 
         private void lblalfabeto_Click(object sender, EventArgs e)
@@ -107,6 +111,72 @@ namespace WindowsFormsApp1
             }
 
                 lblpotencia.Text = cadenaresultado;
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmmenu form = new frmmenu();
+            form.Show();
+        }
+
+        private void txtexponente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtpotencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtinversa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtlongitud_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtchain2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtchain1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabeto.Contains(ingresado))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnconcat_Click(object sender, EventArgs e)
+        {
+            lblconcat.Text = txtchain1.Text + txtchain2.Text;
         }
     }
 }

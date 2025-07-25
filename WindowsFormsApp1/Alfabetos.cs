@@ -22,6 +22,10 @@ namespace WindowsFormsApp1
             {
                 return alfabetoespanol;
             }
+            else if (alfabetoselec == "Num")
+            {
+                return alfabetonumerico;
+            }
             else
             {
                 return new char[] { 'N', 'A' };
