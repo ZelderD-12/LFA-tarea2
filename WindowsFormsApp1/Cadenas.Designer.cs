@@ -33,6 +33,7 @@
             this.btnpotencia = new System.Windows.Forms.Button();
             this.btninversa = new System.Windows.Forms.Button();
             this.pnlmenucadenas = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlalfabeto = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,28 +43,27 @@
             this.pnlalfabetoseleccionado = new System.Windows.Forms.Panel();
             this.btnalfabetochange = new System.Windows.Forms.Button();
             this.pnlinversa = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.btncalcinv = new System.Windows.Forms.Button();
             this.lblinversa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtinversa = new System.Windows.Forms.TextBox();
             this.pnlconcatenacion = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblconcat = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnconcat = new System.Windows.Forms.Button();
             this.txtchain2 = new System.Windows.Forms.TextBox();
             this.txtchain1 = new System.Windows.Forms.TextBox();
             this.pnllongitud = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btncalclong = new System.Windows.Forms.Button();
             this.lbllong = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtlongitud = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtpotencia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblpotencia = new System.Windows.Forms.Label();
@@ -152,6 +152,17 @@
             this.pnlmenucadenas.TabIndex = 4;
             this.pnlmenucadenas.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(131, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(210, 23);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Elige una operación";
+            // 
             // pnlalfabeto
             // 
             this.pnlalfabeto.BackColor = System.Drawing.Color.Teal;
@@ -160,7 +171,7 @@
             this.pnlalfabeto.Controls.Add(this.button2);
             this.pnlalfabeto.Location = new System.Drawing.Point(558, 205);
             this.pnlalfabeto.Name = "pnlalfabeto";
-            this.pnlalfabeto.Size = new System.Drawing.Size(541, 244);
+            this.pnlalfabeto.Size = new System.Drawing.Size(589, 296);
             this.pnlalfabeto.TabIndex = 5;
             // 
             // label1
@@ -261,11 +272,22 @@
             this.pnlinversa.Controls.Add(this.lblinversa);
             this.pnlinversa.Controls.Add(this.label2);
             this.pnlinversa.Controls.Add(this.txtinversa);
-            this.pnlinversa.Location = new System.Drawing.Point(553, 243);
+            this.pnlinversa.Location = new System.Drawing.Point(0, 48);
             this.pnlinversa.Name = "pnlinversa";
             this.pnlinversa.Size = new System.Drawing.Size(848, 225);
             this.pnlinversa.TabIndex = 9;
             this.pnlinversa.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label11.Location = new System.Drawing.Point(41, 95);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 23);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "d =";
             // 
             // btncalcinv
             // 
@@ -324,11 +346,46 @@
             this.pnlconcatenacion.Controls.Add(this.btnconcat);
             this.pnlconcatenacion.Controls.Add(this.txtchain2);
             this.pnlconcatenacion.Controls.Add(this.txtchain1);
-            this.pnlconcatenacion.Location = new System.Drawing.Point(553, 205);
+            this.pnlconcatenacion.Location = new System.Drawing.Point(553, 188);
             this.pnlconcatenacion.Name = "pnlconcatenacion";
             this.pnlconcatenacion.Size = new System.Drawing.Size(654, 344);
             this.pnlconcatenacion.TabIndex = 10;
             this.pnlconcatenacion.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label10.Location = new System.Drawing.Point(91, 100);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 23);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "b =";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label9.Location = new System.Drawing.Point(91, 160);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 23);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "c =";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(91, 285);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 23);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "b * c =";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblconcat
             // 
@@ -391,12 +448,24 @@
             this.pnllongitud.Controls.Add(this.btncalclong);
             this.pnllongitud.Controls.Add(this.lbllong);
             this.pnllongitud.Controls.Add(this.label4);
+            this.pnllongitud.Controls.Add(this.pnlinversa);
             this.pnllongitud.Controls.Add(this.txtlongitud);
-            this.pnllongitud.Location = new System.Drawing.Point(553, 179);
+            this.pnllongitud.Location = new System.Drawing.Point(553, 197);
             this.pnllongitud.Name = "pnllongitud";
             this.pnllongitud.Size = new System.Drawing.Size(746, 238);
             this.pnllongitud.TabIndex = 0;
             this.pnllongitud.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(106, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 23);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "a =";
             // 
             // btncalclong
             // 
@@ -457,74 +526,6 @@
             this.btnback.Text = "Regresar";
             this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(131, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 23);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Elige una operación";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(106, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 23);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "a =";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(91, 285);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 23);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "b * c =";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(91, 160);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 23);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "c =";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label10.Location = new System.Drawing.Point(91, 100);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 29);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "b =";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(41, 95);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 23);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "d =";
             // 
             // txtpotencia
             // 
@@ -611,9 +612,9 @@
             this.lblexponente.AutoSize = true;
             this.lblexponente.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblexponente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblexponente.Location = new System.Drawing.Point(119, 192);
+            this.lblexponente.Location = new System.Drawing.Point(111, 200);
             this.lblexponente.Name = "lblexponente";
-            this.lblexponente.Size = new System.Drawing.Size(56, 29);
+            this.lblexponente.Size = new System.Drawing.Size(45, 23);
             this.lblexponente.TabIndex = 10;
             this.lblexponente.Text = "       ";
             // 
@@ -628,7 +629,7 @@
             this.pnlpotencia.Controls.Add(this.lblpotencia);
             this.pnlpotencia.Controls.Add(this.label3);
             this.pnlpotencia.Controls.Add(this.txtpotencia);
-            this.pnlpotencia.Location = new System.Drawing.Point(553, 214);
+            this.pnlpotencia.Location = new System.Drawing.Point(553, 208);
             this.pnlpotencia.Name = "pnlpotencia";
             this.pnlpotencia.Size = new System.Drawing.Size(773, 273);
             this.pnlpotencia.TabIndex = 0;
@@ -639,12 +640,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1496, 645);
+            this.ClientSize = new System.Drawing.Size(1437, 645);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.pnllongitud);
             this.Controls.Add(this.pnlconcatenacion);
             this.Controls.Add(this.pnlpotencia);
-            this.Controls.Add(this.pnlinversa);
             this.Controls.Add(this.pnlalfabetoseleccionado);
             this.Controls.Add(this.pnlalfabeto);
             this.Controls.Add(this.pnlmenucadenas);

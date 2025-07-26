@@ -105,13 +105,13 @@ namespace WindowsFormsApp1
             int potencia = Convert.ToInt32(txtexponente.Text);
             string cadenaresultado = "";
             lblexponente.Text = txtexponente.Text;
-            if (potencia == 0)
+            string cadenaoriginal = txtpotencia.Text;
+            if (potencia == 0 || cadenaoriginal == string.Empty)
             {
                 cadenaresultado = $"e = λ";
             }
             else if (potencia > 0)
             {
-                string cadenaoriginal = txtpotencia.Text;
 
                 for (int n = 1; n <= potencia; n++)
                 {
@@ -194,27 +194,49 @@ namespace WindowsFormsApp1
                 lblconcat.Text = "λ";
                 return;
             }
-            lblconcat.Text = txtchain1.Text + txtchain2.Text;
+            lblconcat.Text = txtchain1.Text +" "+ txtchain2.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             pnllongitud.Visible = true;
+            pnlconcatenacion.Visible = false;
+            pnlpotencia.Visible = false;
+            pnlinversa.Visible = false;
+            txtlongitud.Text = string.Empty;
+            lbllong.Text = "N/A";
         }
 
         private void btnconcatenacion_Click(object sender, EventArgs e)
         {
+            pnllongitud.Visible = false;
             pnlconcatenacion.Visible = true;
+            pnlpotencia.Visible = false;
+            pnlinversa.Visible = false;
+            txtchain1.Text = string.Empty;
+            txtchain2.Text = string.Empty;
+            lblconcat.Text = "N/A";
         }
 
         private void btnpotencia_Click(object sender, EventArgs e)
         {
+            pnllongitud.Visible = false;
+            pnlconcatenacion.Visible = false;
             pnlpotencia.Visible = true;
+            pnlinversa.Visible = false;
+            txtpotencia.Text = string.Empty;
+            txtexponente.Text = "1";
+            lblpotencia.Text = "N/A";
         }
 
         private void btninversa_Click(object sender, EventArgs e)
         {
+            pnllongitud.Visible = false;
+            pnlconcatenacion.Visible = false;
+            pnlpotencia.Visible = false;
             pnlinversa.Visible = true;
+            txtinversa.Text = string.Empty;
+            lblinversa.Text = "N/A";
         }
 
         private void button4_Click(object sender, EventArgs e)
