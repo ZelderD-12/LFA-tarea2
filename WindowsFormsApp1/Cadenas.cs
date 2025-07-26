@@ -97,17 +97,17 @@ namespace WindowsFormsApp1
         private void btncalclong_Click(object sender, EventArgs e)
         {
             int longitud = txtlongitud.Text.Length;
-            lbllong.Text = "La longitud de la cadena es: " + longitud.ToString();
+            lbllong.Text = "|a| = " + longitud.ToString();
         }
 
         private void btncalcpot_Click(object sender, EventArgs e)
         {
             int potencia = Convert.ToInt32(txtexponente.Text);
             string cadenaresultado = "";
-
+            lblexponente.Text = txtexponente.Text;
             if (potencia == 0)
             {
-                cadenaresultado = $"R{potencia} = λ";
+                cadenaresultado = $"e = λ";
             }
             else if (potencia > 0)
             {
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
                 cadenaresultado = "Inválido";
             }
 
-            lblpotencia.Text = cadenaresultado;
+            lblpotencia.Text = $"e = {cadenaresultado}";
         }
 
         private void btnback_Click(object sender, EventArgs e)
@@ -199,25 +199,21 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pnlmenucadenas.Visible = false;
             pnllongitud.Visible = true;
         }
 
         private void btnconcatenacion_Click(object sender, EventArgs e)
         {
-            pnlmenucadenas.Visible = false;
             pnlconcatenacion.Visible = true;
         }
 
         private void btnpotencia_Click(object sender, EventArgs e)
         {
-            pnlmenucadenas.Visible = false;
             pnlpotencia.Visible = true;
         }
 
         private void btninversa_Click(object sender, EventArgs e)
         {
-            pnlmenucadenas.Visible = false;
             pnlinversa.Visible = true;
         }
 
@@ -261,15 +257,35 @@ namespace WindowsFormsApp1
 
             if (string.IsNullOrEmpty(textooriginal))
             {
-                lblinversa.Text = "λ";
+                lblinversa.Text = "d' = λ";
             }
             else
             {
                 char[] caracteres = textooriginal.ToCharArray();
                 Array.Reverse(caracteres);
                 string textoinverso = new string(caracteres);
-                lblinversa.Text = textoinverso;
+                lblinversa.Text = "d' = " + textoinverso;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cadenas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
