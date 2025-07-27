@@ -57,6 +57,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlpot = new System.Windows.Forms.Panel();
+            this.lbll2exp = new System.Windows.Forms.Label();
+            this.lbll1exp = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbll2pot = new System.Windows.Forms.Label();
+            this.txtexp = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.lbll1pot = new System.Windows.Forms.Label();
             this.btnpote = new System.Windows.Forms.Button();
             this.txtl2pot = new System.Windows.Forms.TextBox();
@@ -64,18 +71,23 @@
             this.txtl1pot = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtexp = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbll2pot = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbll1exp = new System.Windows.Forms.Label();
-            this.lbll2exp = new System.Windows.Forms.Label();
+            this.pnlinv = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lbll2inver = new System.Windows.Forms.Label();
+            this.lbll1inver = new System.Windows.Forms.Label();
+            this.btninver = new System.Windows.Forms.Button();
+            this.txtl2inv = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtl1inv = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.grpmenu.SuspendLayout();
             this.grpselec.SuspendLayout();
             this.grpalfa.SuspendLayout();
             this.pnlcon.SuspendLayout();
             this.pnlpot.SuspendLayout();
+            this.pnlinv.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -209,6 +221,7 @@
             this.btninv.TabIndex = 3;
             this.btninv.Text = "INVERSA";
             this.btninv.UseVisualStyleBackColor = false;
+            this.btninv.Click += new System.EventHandler(this.btninv_Click);
             // 
             // btnpot
             // 
@@ -483,6 +496,85 @@
             this.pnlpot.TabIndex = 5;
             this.pnlpot.Visible = false;
             // 
+            // lbll2exp
+            // 
+            this.lbll2exp.AutoSize = true;
+            this.lbll2exp.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbll2exp.ForeColor = System.Drawing.Color.Blue;
+            this.lbll2exp.Location = new System.Drawing.Point(46, 334);
+            this.lbll2exp.Name = "lbll2exp";
+            this.lbll2exp.Size = new System.Drawing.Size(14, 17);
+            this.lbll2exp.TabIndex = 16;
+            this.lbll2exp.Text = "*";
+            // 
+            // lbll1exp
+            // 
+            this.lbll1exp.AutoSize = true;
+            this.lbll1exp.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbll1exp.ForeColor = System.Drawing.Color.Blue;
+            this.lbll1exp.Location = new System.Drawing.Point(46, 297);
+            this.lbll1exp.Name = "lbll1exp";
+            this.lbll1exp.Size = new System.Drawing.Size(14, 17);
+            this.lbll1exp.TabIndex = 15;
+            this.lbll1exp.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label8.Location = new System.Drawing.Point(20, 343);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(33, 22);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "L2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label9.Location = new System.Drawing.Point(20, 304);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 22);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "L1";
+            // 
+            // lbll2pot
+            // 
+            this.lbll2pot.AutoSize = true;
+            this.lbll2pot.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbll2pot.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lbll2pot.Location = new System.Drawing.Point(67, 343);
+            this.lbll2pot.Name = "lbll2pot";
+            this.lbll2pot.Size = new System.Drawing.Size(48, 22);
+            this.lbll2pot.TabIndex = 12;
+            this.lbll2pot.Text = "= { }";
+            // 
+            // txtexp
+            // 
+            this.txtexp.BackColor = System.Drawing.Color.Khaki;
+            this.txtexp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtexp.ForeColor = System.Drawing.Color.Blue;
+            this.txtexp.Location = new System.Drawing.Point(176, 197);
+            this.txtexp.Multiline = true;
+            this.txtexp.Name = "txtexp";
+            this.txtexp.Size = new System.Drawing.Size(75, 30);
+            this.txtexp.TabIndex = 10;
+            this.txtexp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtexp_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label13.Location = new System.Drawing.Point(71, 204);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 18);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "EXPONENTE:";
+            // 
             // lbll1pot
             // 
             this.lbll1pot.AutoSize = true;
@@ -568,84 +660,140 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Ingrese los Lenguajes a Potenciar:";
             // 
-            // txtexp
+            // pnlinv
             // 
-            this.txtexp.BackColor = System.Drawing.Color.Khaki;
-            this.txtexp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtexp.ForeColor = System.Drawing.Color.Blue;
-            this.txtexp.Location = new System.Drawing.Point(176, 197);
-            this.txtexp.Multiline = true;
-            this.txtexp.Name = "txtexp";
-            this.txtexp.Size = new System.Drawing.Size(75, 30);
-            this.txtexp.TabIndex = 10;
-            this.txtexp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtexp_KeyPress);
+            this.pnlinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlinv.Controls.Add(this.label16);
+            this.pnlinv.Controls.Add(this.label17);
+            this.pnlinv.Controls.Add(this.lbll2inver);
+            this.pnlinv.Controls.Add(this.lbll1inver);
+            this.pnlinv.Controls.Add(this.btninver);
+            this.pnlinv.Controls.Add(this.txtl2inv);
+            this.pnlinv.Controls.Add(this.label21);
+            this.pnlinv.Controls.Add(this.txtl1inv);
+            this.pnlinv.Controls.Add(this.label22);
+            this.pnlinv.Controls.Add(this.label23);
+            this.pnlinv.Location = new System.Drawing.Point(323, 218);
+            this.pnlinv.Name = "pnlinv";
+            this.pnlinv.Size = new System.Drawing.Size(495, 378);
+            this.pnlinv.TabIndex = 17;
+            this.pnlinv.Visible = false;
             // 
-            // label13
+            // label16
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label13.Location = new System.Drawing.Point(71, 204);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 18);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "EXPONENTE:";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label16.Location = new System.Drawing.Point(20, 343);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(38, 22);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "L2\'";
             // 
-            // lbll2pot
+            // label17
             // 
-            this.lbll2pot.AutoSize = true;
-            this.lbll2pot.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbll2pot.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lbll2pot.Location = new System.Drawing.Point(67, 343);
-            this.lbll2pot.Name = "lbll2pot";
-            this.lbll2pot.Size = new System.Drawing.Size(48, 22);
-            this.lbll2pot.TabIndex = 12;
-            this.lbll2pot.Text = "= { }";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label17.Location = new System.Drawing.Point(20, 304);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(38, 22);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "L1\'";
             // 
-            // label8
+            // lbll2inver
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(20, 343);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 22);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "L2";
+            this.lbll2inver.AutoSize = true;
+            this.lbll2inver.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbll2inver.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lbll2inver.Location = new System.Drawing.Point(48, 343);
+            this.lbll2inver.Name = "lbll2inver";
+            this.lbll2inver.Size = new System.Drawing.Size(48, 22);
+            this.lbll2inver.TabIndex = 12;
+            this.lbll2inver.Text = "= { }";
             // 
-            // label9
+            // lbll1inver
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(20, 304);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 22);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "L1";
+            this.lbll1inver.AutoSize = true;
+            this.lbll1inver.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbll1inver.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lbll1inver.Location = new System.Drawing.Point(48, 304);
+            this.lbll1inver.Name = "lbll1inver";
+            this.lbll1inver.Size = new System.Drawing.Size(48, 22);
+            this.lbll1inver.TabIndex = 8;
+            this.lbll1inver.Text = "= { }";
             // 
-            // lbll1exp
+            // btninver
             // 
-            this.lbll1exp.AutoSize = true;
-            this.lbll1exp.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbll1exp.ForeColor = System.Drawing.Color.Blue;
-            this.lbll1exp.Location = new System.Drawing.Point(46, 297);
-            this.lbll1exp.Name = "lbll1exp";
-            this.lbll1exp.Size = new System.Drawing.Size(14, 17);
-            this.lbll1exp.TabIndex = 15;
-            this.lbll1exp.Text = "*";
+            this.btninver.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btninver.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btninver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btninver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btninver.ForeColor = System.Drawing.Color.Navy;
+            this.btninver.Location = new System.Drawing.Point(161, 224);
+            this.btninver.Name = "btninver";
+            this.btninver.Size = new System.Drawing.Size(179, 47);
+            this.btninver.TabIndex = 6;
+            this.btninver.Text = "INVERSA";
+            this.btninver.UseVisualStyleBackColor = false;
+            this.btninver.Click += new System.EventHandler(this.btninver_Click);
             // 
-            // lbll2exp
+            // txtl2inv
             // 
-            this.lbll2exp.AutoSize = true;
-            this.lbll2exp.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbll2exp.ForeColor = System.Drawing.Color.Blue;
-            this.lbll2exp.Location = new System.Drawing.Point(46, 334);
-            this.lbll2exp.Name = "lbll2exp";
-            this.lbll2exp.Size = new System.Drawing.Size(14, 17);
-            this.lbll2exp.TabIndex = 16;
-            this.lbll2exp.Text = "*";
+            this.txtl2inv.BackColor = System.Drawing.Color.Khaki;
+            this.txtl2inv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl2inv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl2inv.ForeColor = System.Drawing.Color.Blue;
+            this.txtl2inv.Location = new System.Drawing.Point(106, 143);
+            this.txtl2inv.Multiline = true;
+            this.txtl2inv.Name = "txtl2inv";
+            this.txtl2inv.Size = new System.Drawing.Size(300, 30);
+            this.txtl2inv.TabIndex = 5;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label21.Location = new System.Drawing.Point(71, 150);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(29, 18);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "L2:";
+            // 
+            // txtl1inv
+            // 
+            this.txtl1inv.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1inv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1inv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1inv.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1inv.Location = new System.Drawing.Point(106, 95);
+            this.txtl1inv.Multiline = true;
+            this.txtl1inv.Name = "txtl1inv";
+            this.txtl1inv.Size = new System.Drawing.Size(300, 30);
+            this.txtl1inv.TabIndex = 3;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label22.Location = new System.Drawing.Point(71, 102);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 18);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "L1:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label23.Location = new System.Drawing.Point(20, 24);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(459, 22);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Ingrese los Lenguajes para obtener su Inversa:";
             // 
             // Lenguajes
             // 
@@ -653,6 +801,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(835, 608);
+            this.Controls.Add(this.pnlinv);
             this.Controls.Add(this.pnlpot);
             this.Controls.Add(this.pnlcon);
             this.Controls.Add(this.grpalfa);
@@ -671,6 +820,8 @@
             this.pnlcon.PerformLayout();
             this.pnlpot.ResumeLayout(false);
             this.pnlpot.PerformLayout();
+            this.pnlinv.ResumeLayout(false);
+            this.pnlinv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -721,5 +872,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbll2exp;
         private System.Windows.Forms.Label lbll1exp;
+        private System.Windows.Forms.Panel pnlinv;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lbll2inver;
+        private System.Windows.Forms.Label lbll1inver;
+        private System.Windows.Forms.Button btninver;
+        private System.Windows.Forms.TextBox txtl2inv;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtl1inv;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }

@@ -53,11 +53,15 @@ namespace WindowsFormsApp1
             grpselec.Visible = true;
             grpselec.Location = new Point(175, 100);
             pnlcon.Visible = false;
+            pnlpot.Visible = false;
+            pnlinv.Visible = false;
         }
 
         private void brncon_Click(object sender, EventArgs e)
         {
             pnlcon.Visible = true;
+            pnlpot.Visible = false;
+            pnlinv.Visible = false;
             txtl1con.Text = string.Empty;
             txtl2con.Text = string.Empty;
             lblconca.Text = "{ }";
@@ -94,6 +98,8 @@ namespace WindowsFormsApp1
         private void btnpot_Click(object sender, EventArgs e)
         {
             pnlpot.Visible = true;
+            pnlcon.Visible = false;
+            pnlinv.Visible = false;
             txtl1pot.Text = string.Empty;
             txtl2pot.Text = string.Empty;
             txtexp.Text = string.Empty;
@@ -132,35 +138,114 @@ namespace WindowsFormsApp1
 
         private void btnpote_Click(object sender, EventArgs e)
         {
-            int potencia = Convert.ToInt32(txtexp.Text);
-            string cadenaresultado1 = "";
-            string cadenaresultado2 = "";
-            lbll1exp.Text = txtexp.Text;
-            lbll2exp.Text = txtexp.Text;
-            string cadenaoriginal1 = txtl1pot.Text;
-            string cadenaoriginal2 = txtl2pot.Text;
-            if (potencia == 0 || cadenaoriginal1 == string.Empty || cadenaoriginal2 == string.Empty)
+            if (string.IsNullOrEmpty(txtexp.Text))
             {
-                cadenaresultado1 = $"= λ";
-                cadenaresultado2 = $"= λ";
-            }
-            else if (potencia > 0)
-            {
-
-                for (int n = 1; n <= potencia; n++)
-                {
-                    cadenaresultado1 += cadenaoriginal1;
-                    cadenaresultado2 += cadenaoriginal2;
-                }
+                MessageBox.Show("Por favor, ingrese un exponente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                cadenaresultado1 = "Inválido";
-                cadenaresultado2 = "Inválido";
-            }
+                int potencia = Convert.ToInt32(txtexp.Text);
+                string cadenaresultado1 = "";
+                string cadenaresultado2 = "";
+                lbll1exp.Text = txtexp.Text;
+                lbll2exp.Text = txtexp.Text;
+                string cadenaoriginal1 = txtl1pot.Text;
+                string cadenaoriginal2 = txtl2pot.Text;
+                if (potencia == 0)
+                {
+                    cadenaresultado1 = "λ";
+                    cadenaresultado2 = "λ";
+                }
+                else if (cadenaoriginal1 == string.Empty && cadenaoriginal2 == string.Empty)
+                {
+                    // Ambos vacíos con potencia > 0
+                    cadenaresultado1 = "λ";
+                    cadenaresultado2 = "λ";
+                }
+                else if (cadenaoriginal1 == string.Empty)
+                {
+                    cadenaresultado1 = "λ";
+                    for (int n = 1; n <= potencia; n++)
+                    {
+                        cadenaresultado2 += cadenaoriginal2;
+                    }
+                }
+                else if (cadenaoriginal2 == string.Empty)
+                {
+                    cadenaresultado2 = "λ";
+                    for (int n = 1; n <= potencia; n++)
+                    {
+                        cadenaresultado1 += cadenaoriginal1;
+                    }
+                }
+                else if (potencia > 0)
+                {
 
-            lbll1pot.Text = $"= {cadenaresultado1}";
-            lbll2pot.Text = $"= {cadenaresultado2}";
+                    for (int n = 1; n <= potencia; n++)
+                    {
+                        cadenaresultado1 += cadenaoriginal1;
+                        cadenaresultado2 += cadenaoriginal2;
+                    }
+                }
+                else
+                {
+                    cadenaresultado1 = "Inválido";
+                    cadenaresultado2 = "Inválido";
+                }
+
+                lbll1pot.Text = $"= {{ {cadenaresultado1} }}";
+                lbll2pot.Text = $"= {{ {cadenaresultado2} }}";
+            }
+        }
+
+        private void btninv_Click(object sender, EventArgs e)
+        {
+            pnlinv.Visible = true;
+            pnlpot.Visible = false;
+            pnlcon.Visible = false;
+            txtl1inv.Text = string.Empty;
+            txtl2inv.Text = string.Empty;
+            lbll1pot.Text = "= { }";
+            lbll2pot.Text = "= { }";
+        }
+
+        private void btninver_Click(object sender, EventArgs e)
+        {
+            string textooriginal1 = txtl1inv.Text;
+            string textooriginal2 = txtl2inv.Text;
+
+            if (string.IsNullOrEmpty(textooriginal1) && string.IsNullOrEmpty(textooriginal2))
+            {
+                lbll1inver.Text = "= { λ }";
+                lbll2inver.Text = "= { λ }";
+            }
+            else if (string.IsNullOrEmpty(textooriginal1))
+            {
+                lbll1inver.Text = "= { λ }";
+                char[] caracteres2 = textooriginal2.ToCharArray();
+                Array.Reverse(caracteres2);
+                string textoinverso2 = new string(caracteres2);
+                lbll2inver.Text = "= { " + textoinverso2 + " }";
+            }
+            else if (string.IsNullOrEmpty(textooriginal2))
+            {
+                char[] caracteres1 = textooriginal1.ToCharArray();
+                Array.Reverse(caracteres1);
+                string textoinverso1 = new string(caracteres1);
+                lbll1inver.Text = "= { " + textoinverso1 + " }";
+                lbll2inver.Text = "= { λ }";
+            }
+            else
+            {
+                char[] caracteres1 = textooriginal1.ToCharArray();
+                char[] caracteres2 = textooriginal2.ToCharArray();
+                Array.Reverse(caracteres1);
+                Array.Reverse(caracteres2);
+                string textoinverso1 = new string(caracteres1);
+                string textoinverso2 = new string(caracteres2);
+                lbll1inver.Text = "= { " + textoinverso1 + " }";
+                lbll2inver.Text = "= { " + textoinverso2 + " }";
+            }
         }
     }
 }
