@@ -109,6 +109,28 @@
             this.txtl1dif = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.pnlcomp = new System.Windows.Forms.Panel();
+            this.pnlkle = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lblkle = new System.Windows.Forms.Label();
+            this.btnklee = new System.Windows.Forms.Button();
+            this.txtl1kle = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lblcomp = new System.Windows.Forms.Label();
+            this.btncomp = new System.Windows.Forms.Button();
+            this.txtl1comp = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.pnlpos = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.lblpos = new System.Windows.Forms.Label();
+            this.btnposi = new System.Windows.Forms.Button();
+            this.txtl1pos = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.btnreg = new System.Windows.Forms.Button();
             this.grpmenu.SuspendLayout();
             this.grpselec.SuspendLayout();
             this.grpalfa.SuspendLayout();
@@ -118,6 +140,9 @@
             this.pnlunion.SuspendLayout();
             this.pnlinter.SuspendLayout();
             this.pnldif.SuspendLayout();
+            this.pnlcomp.SuspendLayout();
+            this.pnlkle.SuspendLayout();
+            this.pnlpos.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -167,6 +192,7 @@
             this.btnpos.TabIndex = 9;
             this.btnpos.Text = "CIERRE POSITIVO";
             this.btnpos.UseVisualStyleBackColor = false;
+            this.btnpos.Click += new System.EventHandler(this.btnpos_Click);
             // 
             // btnkle
             // 
@@ -181,6 +207,7 @@
             this.btnkle.TabIndex = 8;
             this.btnkle.Text = "CIERRE DE KLEENE";
             this.btnkle.UseVisualStyleBackColor = false;
+            this.btnkle.Click += new System.EventHandler(this.btnkle_Click);
             // 
             // btncom
             // 
@@ -195,6 +222,7 @@
             this.btncom.TabIndex = 7;
             this.btncom.Text = "COMPLEMENTARIO";
             this.btncom.UseVisualStyleBackColor = false;
+            this.btncom.Click += new System.EventHandler(this.btncom_Click);
             // 
             // btndif
             // 
@@ -538,9 +566,9 @@
             this.lbll2exp.ForeColor = System.Drawing.Color.Blue;
             this.lbll2exp.Location = new System.Drawing.Point(46, 334);
             this.lbll2exp.Name = "lbll2exp";
-            this.lbll2exp.Size = new System.Drawing.Size(14, 17);
+            this.lbll2exp.Size = new System.Drawing.Size(17, 17);
             this.lbll2exp.TabIndex = 16;
-            this.lbll2exp.Text = "*";
+            this.lbll2exp.Text = "n";
             // 
             // lbll1exp
             // 
@@ -549,9 +577,9 @@
             this.lbll1exp.ForeColor = System.Drawing.Color.Blue;
             this.lbll1exp.Location = new System.Drawing.Point(46, 297);
             this.lbll1exp.Name = "lbll1exp";
-            this.lbll1exp.Size = new System.Drawing.Size(14, 17);
+            this.lbll1exp.Size = new System.Drawing.Size(17, 17);
             this.lbll1exp.TabIndex = 15;
-            this.lbll1exp.Text = "*";
+            this.lbll1exp.Text = "n";
             // 
             // label8
             // 
@@ -1172,12 +1200,294 @@
             this.label31.Text = "Ingrese los Lenguajes para obtener su Diferencia:";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlcomp
+            // 
+            this.pnlcomp.AutoScroll = true;
+            this.pnlcomp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlcomp.Controls.Add(this.label28);
+            this.pnlcomp.Controls.Add(this.lblcomp);
+            this.pnlcomp.Controls.Add(this.btncomp);
+            this.pnlcomp.Controls.Add(this.txtl1comp);
+            this.pnlcomp.Controls.Add(this.label34);
+            this.pnlcomp.Controls.Add(this.label35);
+            this.pnlcomp.Location = new System.Drawing.Point(321, 218);
+            this.pnlcomp.Name = "pnlcomp";
+            this.pnlcomp.Size = new System.Drawing.Size(495, 378);
+            this.pnlcomp.TabIndex = 21;
+            this.pnlcomp.Visible = false;
+            // 
+            // pnlkle
+            // 
+            this.pnlkle.AutoScroll = true;
+            this.pnlkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlkle.Controls.Add(this.label32);
+            this.pnlkle.Controls.Add(this.lblkle);
+            this.pnlkle.Controls.Add(this.btnklee);
+            this.pnlkle.Controls.Add(this.txtl1kle);
+            this.pnlkle.Controls.Add(this.label36);
+            this.pnlkle.Controls.Add(this.label37);
+            this.pnlkle.Location = new System.Drawing.Point(321, 216);
+            this.pnlkle.Name = "pnlkle";
+            this.pnlkle.Size = new System.Drawing.Size(495, 378);
+            this.pnlkle.TabIndex = 22;
+            this.pnlkle.Visible = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label32.Location = new System.Drawing.Point(20, 312);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 22);
+            this.label32.TabIndex = 13;
+            this.label32.Text = "L1* =";
+            // 
+            // lblkle
+            // 
+            this.lblkle.AutoSize = true;
+            this.lblkle.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblkle.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblkle.Location = new System.Drawing.Point(76, 312);
+            this.lblkle.Name = "lblkle";
+            this.lblkle.Size = new System.Drawing.Size(30, 22);
+            this.lblkle.TabIndex = 8;
+            this.lblkle.Text = "{ }";
+            // 
+            // btnklee
+            // 
+            this.btnklee.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnklee.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btnklee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnklee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnklee.ForeColor = System.Drawing.Color.Navy;
+            this.btnklee.Location = new System.Drawing.Point(148, 219);
+            this.btnklee.Name = "btnklee";
+            this.btnklee.Size = new System.Drawing.Size(204, 47);
+            this.btnklee.TabIndex = 6;
+            this.btnklee.Text = "CIERRE DE KLEENE:";
+            this.btnklee.UseVisualStyleBackColor = false;
+            this.btnklee.Click += new System.EventHandler(this.btnklee_Click);
+            // 
+            // txtl1kle
+            // 
+            this.txtl1kle.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1kle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1kle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1kle.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1kle.Location = new System.Drawing.Point(106, 135);
+            this.txtl1kle.Multiline = true;
+            this.txtl1kle.Name = "txtl1kle";
+            this.txtl1kle.Size = new System.Drawing.Size(300, 30);
+            this.txtl1kle.TabIndex = 3;
+            this.txtl1kle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1kle_KeyPress);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label36.Location = new System.Drawing.Point(71, 142);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(29, 18);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "L1:";
+            // 
+            // label37
+            // 
+            this.label37.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label37.Location = new System.Drawing.Point(8, 28);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(483, 59);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Ingrese el Lenguaje para obtener su Cierre de Kleene:";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label28.Location = new System.Drawing.Point(20, 312);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 22);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "¬ L1 =";
+            // 
+            // lblcomp
+            // 
+            this.lblcomp.AutoSize = true;
+            this.lblcomp.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcomp.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblcomp.Location = new System.Drawing.Point(95, 312);
+            this.lblcomp.Name = "lblcomp";
+            this.lblcomp.Size = new System.Drawing.Size(30, 22);
+            this.lblcomp.TabIndex = 8;
+            this.lblcomp.Text = "{ }";
+            // 
+            // btncomp
+            // 
+            this.btncomp.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btncomp.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btncomp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncomp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncomp.ForeColor = System.Drawing.Color.Navy;
+            this.btncomp.Location = new System.Drawing.Point(155, 223);
+            this.btncomp.Name = "btncomp";
+            this.btncomp.Size = new System.Drawing.Size(188, 47);
+            this.btncomp.TabIndex = 6;
+            this.btncomp.Text = "COMPLEMENTARIO";
+            this.btncomp.UseVisualStyleBackColor = false;
+            this.btncomp.Click += new System.EventHandler(this.btncomp_Click);
+            // 
+            // txtl1comp
+            // 
+            this.txtl1comp.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1comp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1comp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1comp.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1comp.Location = new System.Drawing.Point(106, 135);
+            this.txtl1comp.Multiline = true;
+            this.txtl1comp.Name = "txtl1comp";
+            this.txtl1comp.Size = new System.Drawing.Size(300, 30);
+            this.txtl1comp.TabIndex = 3;
+            this.txtl1comp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1comp_KeyPress);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label34.Location = new System.Drawing.Point(71, 142);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(29, 18);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "L1:";
+            // 
+            // label35
+            // 
+            this.label35.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label35.Location = new System.Drawing.Point(8, 28);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(483, 59);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "Ingrese el Lenguaje para obtener su Complementario:";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlpos
+            // 
+            this.pnlpos.AutoScroll = true;
+            this.pnlpos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlpos.Controls.Add(this.label33);
+            this.pnlpos.Controls.Add(this.lblpos);
+            this.pnlpos.Controls.Add(this.btnposi);
+            this.pnlpos.Controls.Add(this.txtl1pos);
+            this.pnlpos.Controls.Add(this.label39);
+            this.pnlpos.Controls.Add(this.label40);
+            this.pnlpos.Location = new System.Drawing.Point(321, 219);
+            this.pnlpos.Name = "pnlpos";
+            this.pnlpos.Size = new System.Drawing.Size(495, 378);
+            this.pnlpos.TabIndex = 23;
+            this.pnlpos.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label33.Location = new System.Drawing.Point(20, 312);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(63, 22);
+            this.label33.TabIndex = 13;
+            this.label33.Text = "L1+ =";
+            // 
+            // lblpos
+            // 
+            this.lblpos.AutoSize = true;
+            this.lblpos.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpos.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblpos.Location = new System.Drawing.Point(76, 312);
+            this.lblpos.Name = "lblpos";
+            this.lblpos.Size = new System.Drawing.Size(30, 22);
+            this.lblpos.TabIndex = 8;
+            this.lblpos.Text = "{ }";
+            // 
+            // btnposi
+            // 
+            this.btnposi.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnposi.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btnposi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnposi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnposi.ForeColor = System.Drawing.Color.Navy;
+            this.btnposi.Location = new System.Drawing.Point(148, 219);
+            this.btnposi.Name = "btnposi";
+            this.btnposi.Size = new System.Drawing.Size(204, 47);
+            this.btnposi.TabIndex = 6;
+            this.btnposi.Text = "CIERRE POSITIVO:";
+            this.btnposi.UseVisualStyleBackColor = false;
+            this.btnposi.Click += new System.EventHandler(this.btnposi_Click);
+            // 
+            // txtl1pos
+            // 
+            this.txtl1pos.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1pos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1pos.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1pos.Location = new System.Drawing.Point(106, 135);
+            this.txtl1pos.Multiline = true;
+            this.txtl1pos.Name = "txtl1pos";
+            this.txtl1pos.Size = new System.Drawing.Size(300, 30);
+            this.txtl1pos.TabIndex = 3;
+            this.txtl1pos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1pos_KeyPress);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label39.Location = new System.Drawing.Point(71, 142);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(29, 18);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "L1:";
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label40.Location = new System.Drawing.Point(8, 28);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(483, 59);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "Ingrese el Lenguaje para obtener su Cierre Positivo:";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnreg
+            // 
+            this.btnreg.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnreg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreg.ForeColor = System.Drawing.Color.White;
+            this.btnreg.Location = new System.Drawing.Point(13, 20);
+            this.btnreg.Name = "btnreg";
+            this.btnreg.Size = new System.Drawing.Size(114, 36);
+            this.btnreg.TabIndex = 24;
+            this.btnreg.Text = "REGRESAR";
+            this.btnreg.UseVisualStyleBackColor = false;
+            this.btnreg.Click += new System.EventHandler(this.btnreg_Click);
+            // 
             // Lenguajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(835, 608);
+            this.Controls.Add(this.btnreg);
+            this.Controls.Add(this.pnlpos);
+            this.Controls.Add(this.pnlkle);
+            this.Controls.Add(this.pnlcomp);
             this.Controls.Add(this.pnldif);
             this.Controls.Add(this.pnlinter);
             this.Controls.Add(this.pnlunion);
@@ -1208,6 +1518,12 @@
             this.pnlinter.PerformLayout();
             this.pnldif.ResumeLayout(false);
             this.pnldif.PerformLayout();
+            this.pnlcomp.ResumeLayout(false);
+            this.pnlcomp.PerformLayout();
+            this.pnlkle.ResumeLayout(false);
+            this.pnlkle.PerformLayout();
+            this.pnlpos.ResumeLayout(false);
+            this.pnlpos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1296,5 +1612,27 @@
         private System.Windows.Forms.TextBox txtl1dif;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel pnlcomp;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblcomp;
+        private System.Windows.Forms.Button btncomp;
+        private System.Windows.Forms.TextBox txtl1comp;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel pnlkle;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblkle;
+        private System.Windows.Forms.Button btnklee;
+        private System.Windows.Forms.TextBox txtl1kle;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Panel pnlpos;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblpos;
+        private System.Windows.Forms.Button btnposi;
+        private System.Windows.Forms.TextBox txtl1pos;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button btnreg;
     }
 }

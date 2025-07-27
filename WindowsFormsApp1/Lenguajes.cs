@@ -58,6 +58,9 @@ namespace WindowsFormsApp1
             pnlunion.Visible = false;
             pnlinter.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
         }
 
         private void brncon_Click(object sender, EventArgs e)
@@ -68,6 +71,9 @@ namespace WindowsFormsApp1
             pnlunion.Visible = false;
             pnlinter.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1con.Text = string.Empty;
             txtl2con.Text = string.Empty;
             lblconca.Text = "{ }";
@@ -134,13 +140,16 @@ namespace WindowsFormsApp1
             pnlunion.Visible = false;
             pnlinter.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1pot.Text = string.Empty;
             txtl2pot.Text = string.Empty;
             txtexp.Text = string.Empty;
             lbll1pot.Text = "= { }";
             lbll2pot.Text = "= { }";
-            lbll1exp.Text = "*";
-            lbll2exp.Text = "*";
+            lbll1exp.Text = "n";
+            lbll2exp.Text = "n";
         }
 
         private void txtexp_KeyPress(object sender, KeyPressEventArgs e)
@@ -232,6 +241,9 @@ namespace WindowsFormsApp1
             pnlunion.Visible = false;
             pnlinter.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1inv.Text = string.Empty;
             txtl2inv.Text = string.Empty;
             lbll1pot.Text = "= { }";
@@ -321,6 +333,9 @@ namespace WindowsFormsApp1
             pnlcon.Visible = false;
             pnlinter.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1uni.Text = string.Empty;
             txtl2uni.Text = string.Empty;
             lblunion.Text = "{ }";
@@ -382,6 +397,9 @@ namespace WindowsFormsApp1
             pnlcon.Visible = false;
             pnlunion.Visible = false;
             pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1inter.Text = string.Empty;
             txtl2inter.Text = string.Empty;
             lblinter.Text = "{ }";
@@ -469,9 +487,12 @@ namespace WindowsFormsApp1
             pnlcon.Visible = false;
             pnlunion.Visible = false;
             pnlinter.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
             txtl1dif.Text = string.Empty;
             txtl2dif.Text = string.Empty;
-            lblinter.Text = "{ }";
+            lbldif.Text = "{ }";
         }
 
         private void txtl1dif_KeyPress(object sender, KeyPressEventArgs e)
@@ -541,6 +562,197 @@ namespace WindowsFormsApp1
             lbldif.Text = diferencia.Count > 0
                 ? "{ " + string.Join(", ", diferencia) + " }"
                 : "{ λ }";
+        }
+
+        private void btncom_Click(object sender, EventArgs e)
+        {
+            pnlcomp.Visible = true;
+            pnlinv.Visible = false;
+            pnlpot.Visible = false;
+            pnlcon.Visible = false;
+            pnlunion.Visible = false;
+            pnlinter.Visible = false;
+            pnldif.Visible = false;
+            pnlkle.Visible = false;
+            pnlpos.Visible = false;
+            txtl1comp.Text = string.Empty;
+            lblcomp.Text = "{ }";
+        }
+
+        private void txtl1comp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado) && ingresado != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btncomp_Click(object sender, EventArgs e)
+        {
+            string textooriginal1 = txtl1comp.Text;
+            bool campo1Vacio = string.IsNullOrWhiteSpace(textooriginal1);
+
+            // Si el campo está vacío, complemento es todo el alfabeto
+            if (campo1Vacio)
+            {
+                lblcomp.Text = "{ λ, " + string.Join(", ", alfabeto) + " }";
+                return;
+            }
+
+            // Convertir alfabeto de char[] a string[]
+            List<string> alfabetoStr = alfabeto.Select(c => c.ToString()).ToList();
+
+            // Cargar elementos del lenguaje
+            HashSet<string> lenguajeL = new HashSet<string>();
+            string[] elementos = textooriginal1.Split(',');
+            foreach (string elem in elementos)
+            {
+                lenguajeL.Add(elem.Trim());
+            }
+
+            // Calcular complemento correctamente
+            var complemento = alfabetoStr.Except(lenguajeL).ToList();
+
+            lblcomp.Text = complemento.Count > 0
+                ? "{ λ, " + string.Join(", ", complemento) + " }"
+                : "{ λ }";
+        }
+
+        private void btnkle_Click(object sender, EventArgs e)
+        {
+            pnlkle.Visible = true;
+            pnlinv.Visible = false;
+            pnlpot.Visible = false;
+            pnlcon.Visible = false;
+            pnlunion.Visible = false;
+            pnlinter.Visible = false;
+            pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlpos.Visible = false;
+            txtl1kle.Text = string.Empty;
+            lblkle.Text = "{ }";
+        }
+
+        private void txtl1kle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado) && ingresado != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnklee_Click(object sender, EventArgs e)
+        {
+            string textooriginal1 = txtl1kle.Text;
+            bool campo1Vacio = string.IsNullOrWhiteSpace(textooriginal1);
+
+            HashSet<string> lenguajeL = new HashSet<string>();
+
+            if (!campo1Vacio)
+            {
+                string[] elementos = textooriginal1.Split(',');
+                foreach (string elem in elementos)
+                {
+                    lenguajeL.Add(elem.Trim());
+                }
+            }
+
+            int profundidad = 3; // Puedes cambiar el nivel de repeticiones
+            HashSet<string> cierreKleene = new HashSet<string> { "λ" };
+
+            for (int i = 1; i <= profundidad; i++)
+            {
+                var nuevos = GenerarCombinaciones(lenguajeL.ToList(), i);
+                foreach (string s in nuevos)
+                {
+                    cierreKleene.Add(s);
+                }
+            }
+
+            lblkle.Text = "{ " + string.Join(", ", cierreKleene) + ", ... }";
+        }
+
+        private List<string> GenerarCombinaciones(List<string> lenguaje, int longitud)
+        {
+            if (longitud == 1)
+                return new List<string>(lenguaje);
+
+            List<string> resultado = new List<string>();
+            var anteriores = GenerarCombinaciones(lenguaje, longitud - 1);
+
+            foreach (string previo in anteriores)
+            {
+                foreach (string actual in lenguaje)
+                {
+                    resultado.Add(previo + actual);
+                }
+            }
+
+            return resultado;
+        }
+
+        private void btnpos_Click(object sender, EventArgs e)
+        {
+            pnlpos.Visible = true;
+            pnlinv.Visible = false;
+            pnlpot.Visible = false;
+            pnlcon.Visible = false;
+            pnlunion.Visible = false;
+            pnlinter.Visible = false;
+            pnldif.Visible = false;
+            pnlcomp.Visible = false;
+            pnlkle.Visible = false;
+            txtl1pos.Text = string.Empty;
+            lblpos.Text = "{ }";
+        }
+
+        private void txtl1pos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ingresado = char.ToUpper(e.KeyChar);
+            if (!char.IsControl(e.KeyChar) && !alfabeto.Contains(ingresado) && !alfabetonumerico.Contains(ingresado) && ingresado != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnposi_Click(object sender, EventArgs e)
+        {
+            string textooriginal1 = txtl1pos.Text;
+            bool campo1Vacio = string.IsNullOrWhiteSpace(textooriginal1);
+
+            HashSet<string> lenguajeL = new HashSet<string>();
+
+            if (!campo1Vacio)
+            {
+                string[] elementos = textooriginal1.Split(',');
+                foreach (string elem in elementos)
+                {
+                    lenguajeL.Add(elem.Trim());
+                }
+            }
+
+            int profundidad = 3; // Puedes aumentar para más combinaciones
+            HashSet<string> cierrePositivo = new HashSet<string>(); // SIN λ
+
+            for (int i = 1; i <= profundidad; i++)
+            {
+                var nuevos = GenerarCombinaciones(lenguajeL.ToList(), i);
+                foreach (string s in nuevos)
+                {
+                    cierrePositivo.Add(s);
+                }
+            }
+
+            lblpos.Text = "{ " + string.Join(", ", cierrePositivo) + ", ... }";
+        }
+
+        private void btnreg_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmmenu form = new frmmenu();
+            form.Show();
         }
     }
 }
