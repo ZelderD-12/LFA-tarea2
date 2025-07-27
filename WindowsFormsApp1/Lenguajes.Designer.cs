@@ -82,12 +82,42 @@
             this.txtl1inv = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.pnlunion = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblunion = new System.Windows.Forms.Label();
+            this.btnunion = new System.Windows.Forms.Button();
+            this.txtl2uni = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtl1uni = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pnlinter = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblinter = new System.Windows.Forms.Label();
+            this.btninter = new System.Windows.Forms.Button();
+            this.txtl2inter = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtl1inter = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pnldif = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbldif = new System.Windows.Forms.Label();
+            this.btndife = new System.Windows.Forms.Button();
+            this.txtl2dif = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtl1dif = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.grpmenu.SuspendLayout();
             this.grpselec.SuspendLayout();
             this.grpalfa.SuspendLayout();
             this.pnlcon.SuspendLayout();
             this.pnlpot.SuspendLayout();
             this.pnlinv.SuspendLayout();
+            this.pnlunion.SuspendLayout();
+            this.pnlinter.SuspendLayout();
+            this.pnldif.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -179,6 +209,7 @@
             this.btndif.TabIndex = 6;
             this.btndif.Text = "DIFERENCIA";
             this.btndif.UseVisualStyleBackColor = false;
+            this.btndif.Click += new System.EventHandler(this.btndif_Click);
             // 
             // btnint
             // 
@@ -191,8 +222,9 @@
             this.btnint.Name = "btnint";
             this.btnint.Size = new System.Drawing.Size(211, 47);
             this.btnint.TabIndex = 5;
-            this.btnint.Text = "INTERSACCIÓN";
+            this.btnint.Text = "INTERSECCIÓN";
             this.btnint.UseVisualStyleBackColor = false;
+            this.btnint.Click += new System.EventHandler(this.btnint_Click);
             // 
             // btnuni
             // 
@@ -207,6 +239,7 @@
             this.btnuni.TabIndex = 4;
             this.btnuni.Text = "UNIÓN";
             this.btnuni.UseVisualStyleBackColor = false;
+            this.btnuni.Click += new System.EventHandler(this.btnuni_Click);
             // 
             // btninv
             // 
@@ -362,6 +395,7 @@
             // 
             // pnlcon
             // 
+            this.pnlcon.AutoScroll = true;
             this.pnlcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
             this.pnlcon.Controls.Add(this.lblconca);
             this.pnlcon.Controls.Add(this.label7);
@@ -475,6 +509,7 @@
             // 
             // pnlpot
             // 
+            this.pnlpot.AutoScroll = true;
             this.pnlpot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
             this.pnlpot.Controls.Add(this.lbll2exp);
             this.pnlpot.Controls.Add(this.lbll1exp);
@@ -662,6 +697,7 @@
             // 
             // pnlinv
             // 
+            this.pnlinv.AutoScroll = true;
             this.pnlinv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
             this.pnlinv.Controls.Add(this.label16);
             this.pnlinv.Controls.Add(this.label17);
@@ -749,6 +785,7 @@
             this.txtl2inv.Name = "txtl2inv";
             this.txtl2inv.Size = new System.Drawing.Size(300, 30);
             this.txtl2inv.TabIndex = 5;
+            this.txtl2inv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl2inv_KeyPress);
             // 
             // label21
             // 
@@ -772,6 +809,7 @@
             this.txtl1inv.Name = "txtl1inv";
             this.txtl1inv.Size = new System.Drawing.Size(300, 30);
             this.txtl1inv.TabIndex = 3;
+            this.txtl1inv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1inv_KeyPress);
             // 
             // label22
             // 
@@ -795,12 +833,354 @@
             this.label23.TabIndex = 1;
             this.label23.Text = "Ingrese los Lenguajes para obtener su Inversa:";
             // 
+            // pnlunion
+            // 
+            this.pnlunion.AutoScroll = true;
+            this.pnlunion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlunion.Controls.Add(this.label15);
+            this.pnlunion.Controls.Add(this.lblunion);
+            this.pnlunion.Controls.Add(this.btnunion);
+            this.pnlunion.Controls.Add(this.txtl2uni);
+            this.pnlunion.Controls.Add(this.label20);
+            this.pnlunion.Controls.Add(this.txtl1uni);
+            this.pnlunion.Controls.Add(this.label24);
+            this.pnlunion.Controls.Add(this.label25);
+            this.pnlunion.Location = new System.Drawing.Point(323, 218);
+            this.pnlunion.Name = "pnlunion";
+            this.pnlunion.Size = new System.Drawing.Size(495, 378);
+            this.pnlunion.TabIndex = 18;
+            this.pnlunion.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label15.Location = new System.Drawing.Point(20, 312);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 22);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "L1 U L2 =";
+            // 
+            // lblunion
+            // 
+            this.lblunion.AutoSize = true;
+            this.lblunion.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblunion.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblunion.Location = new System.Drawing.Point(121, 312);
+            this.lblunion.Name = "lblunion";
+            this.lblunion.Size = new System.Drawing.Size(30, 22);
+            this.lblunion.TabIndex = 8;
+            this.lblunion.Text = "{ }";
+            // 
+            // btnunion
+            // 
+            this.btnunion.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnunion.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btnunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnunion.ForeColor = System.Drawing.Color.Navy;
+            this.btnunion.Location = new System.Drawing.Point(161, 224);
+            this.btnunion.Name = "btnunion";
+            this.btnunion.Size = new System.Drawing.Size(179, 47);
+            this.btnunion.TabIndex = 6;
+            this.btnunion.Text = "UNIÓN";
+            this.btnunion.UseVisualStyleBackColor = false;
+            this.btnunion.Click += new System.EventHandler(this.btnunion_Click);
+            // 
+            // txtl2uni
+            // 
+            this.txtl2uni.BackColor = System.Drawing.Color.Khaki;
+            this.txtl2uni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl2uni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl2uni.ForeColor = System.Drawing.Color.Blue;
+            this.txtl2uni.Location = new System.Drawing.Point(106, 143);
+            this.txtl2uni.Multiline = true;
+            this.txtl2uni.Name = "txtl2uni";
+            this.txtl2uni.Size = new System.Drawing.Size(300, 30);
+            this.txtl2uni.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label20.Location = new System.Drawing.Point(71, 150);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 18);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "L2:";
+            // 
+            // txtl1uni
+            // 
+            this.txtl1uni.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1uni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1uni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1uni.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1uni.Location = new System.Drawing.Point(106, 95);
+            this.txtl1uni.Multiline = true;
+            this.txtl1uni.Name = "txtl1uni";
+            this.txtl1uni.Size = new System.Drawing.Size(300, 30);
+            this.txtl1uni.TabIndex = 3;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label24.Location = new System.Drawing.Point(71, 102);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(29, 18);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "L1:";
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label25.Location = new System.Drawing.Point(28, 28);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(451, 29);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Ingrese los Lenguajes para obtener su Unión:";
+            // 
+            // pnlinter
+            // 
+            this.pnlinter.AutoScroll = true;
+            this.pnlinter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnlinter.Controls.Add(this.label14);
+            this.pnlinter.Controls.Add(this.lblinter);
+            this.pnlinter.Controls.Add(this.btninter);
+            this.pnlinter.Controls.Add(this.txtl2inter);
+            this.pnlinter.Controls.Add(this.label19);
+            this.pnlinter.Controls.Add(this.txtl1inter);
+            this.pnlinter.Controls.Add(this.label26);
+            this.pnlinter.Controls.Add(this.label27);
+            this.pnlinter.Location = new System.Drawing.Point(323, 219);
+            this.pnlinter.Name = "pnlinter";
+            this.pnlinter.Size = new System.Drawing.Size(495, 378);
+            this.pnlinter.TabIndex = 19;
+            this.pnlinter.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(20, 312);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 22);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "L1 ∩ L2 =";
+            // 
+            // lblinter
+            // 
+            this.lblinter.AutoSize = true;
+            this.lblinter.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinter.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblinter.Location = new System.Drawing.Point(121, 312);
+            this.lblinter.Name = "lblinter";
+            this.lblinter.Size = new System.Drawing.Size(30, 22);
+            this.lblinter.TabIndex = 8;
+            this.lblinter.Text = "{ }";
+            // 
+            // btninter
+            // 
+            this.btninter.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btninter.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btninter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btninter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btninter.ForeColor = System.Drawing.Color.Navy;
+            this.btninter.Location = new System.Drawing.Point(161, 224);
+            this.btninter.Name = "btninter";
+            this.btninter.Size = new System.Drawing.Size(179, 47);
+            this.btninter.TabIndex = 6;
+            this.btninter.Text = "INTERSECCIÓN";
+            this.btninter.UseVisualStyleBackColor = false;
+            this.btninter.Click += new System.EventHandler(this.btninter_Click);
+            // 
+            // txtl2inter
+            // 
+            this.txtl2inter.BackColor = System.Drawing.Color.Khaki;
+            this.txtl2inter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl2inter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl2inter.ForeColor = System.Drawing.Color.Blue;
+            this.txtl2inter.Location = new System.Drawing.Point(106, 143);
+            this.txtl2inter.Multiline = true;
+            this.txtl2inter.Name = "txtl2inter";
+            this.txtl2inter.Size = new System.Drawing.Size(300, 30);
+            this.txtl2inter.TabIndex = 5;
+            this.txtl2inter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl2inter_KeyPress);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label19.Location = new System.Drawing.Point(71, 150);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(29, 18);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "L2:";
+            // 
+            // txtl1inter
+            // 
+            this.txtl1inter.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1inter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1inter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1inter.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1inter.Location = new System.Drawing.Point(106, 95);
+            this.txtl1inter.Multiline = true;
+            this.txtl1inter.Name = "txtl1inter";
+            this.txtl1inter.Size = new System.Drawing.Size(300, 30);
+            this.txtl1inter.TabIndex = 3;
+            this.txtl1inter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1inter_KeyPress);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label26.Location = new System.Drawing.Point(71, 102);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 18);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "L1:";
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label27.Location = new System.Drawing.Point(53, 12);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(384, 59);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Ingrese los Lenguajes para obtener su Intersección:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnldif
+            // 
+            this.pnldif.AutoScroll = true;
+            this.pnldif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(55)))));
+            this.pnldif.Controls.Add(this.label18);
+            this.pnldif.Controls.Add(this.lbldif);
+            this.pnldif.Controls.Add(this.btndife);
+            this.pnldif.Controls.Add(this.txtl2dif);
+            this.pnldif.Controls.Add(this.label29);
+            this.pnldif.Controls.Add(this.txtl1dif);
+            this.pnldif.Controls.Add(this.label30);
+            this.pnldif.Controls.Add(this.label31);
+            this.pnldif.Location = new System.Drawing.Point(321, 219);
+            this.pnldif.Name = "pnldif";
+            this.pnldif.Size = new System.Drawing.Size(495, 378);
+            this.pnldif.TabIndex = 20;
+            this.pnldif.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label18.Location = new System.Drawing.Point(20, 312);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 22);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "L1 − L2 =";
+            // 
+            // lbldif
+            // 
+            this.lbldif.AutoSize = true;
+            this.lbldif.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldif.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lbldif.Location = new System.Drawing.Point(121, 312);
+            this.lbldif.Name = "lbldif";
+            this.lbldif.Size = new System.Drawing.Size(30, 22);
+            this.lbldif.TabIndex = 8;
+            this.lbldif.Text = "{ }";
+            // 
+            // btndife
+            // 
+            this.btndife.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btndife.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.btndife.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndife.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndife.ForeColor = System.Drawing.Color.Navy;
+            this.btndife.Location = new System.Drawing.Point(161, 224);
+            this.btndife.Name = "btndife";
+            this.btndife.Size = new System.Drawing.Size(179, 47);
+            this.btndife.TabIndex = 6;
+            this.btndife.Text = "DIFERENCIA";
+            this.btndife.UseVisualStyleBackColor = false;
+            this.btndife.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtl2dif
+            // 
+            this.txtl2dif.BackColor = System.Drawing.Color.Khaki;
+            this.txtl2dif.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl2dif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl2dif.ForeColor = System.Drawing.Color.Blue;
+            this.txtl2dif.Location = new System.Drawing.Point(106, 143);
+            this.txtl2dif.Multiline = true;
+            this.txtl2dif.Name = "txtl2dif";
+            this.txtl2dif.Size = new System.Drawing.Size(300, 30);
+            this.txtl2dif.TabIndex = 5;
+            this.txtl2dif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl2dif_KeyPress);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label29.Location = new System.Drawing.Point(71, 150);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 18);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "L2:";
+            // 
+            // txtl1dif
+            // 
+            this.txtl1dif.BackColor = System.Drawing.Color.Khaki;
+            this.txtl1dif.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtl1dif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtl1dif.ForeColor = System.Drawing.Color.Blue;
+            this.txtl1dif.Location = new System.Drawing.Point(106, 95);
+            this.txtl1dif.Multiline = true;
+            this.txtl1dif.Name = "txtl1dif";
+            this.txtl1dif.Size = new System.Drawing.Size(300, 30);
+            this.txtl1dif.TabIndex = 3;
+            this.txtl1dif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtl1dif_KeyPress);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Leelawadee", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label30.Location = new System.Drawing.Point(71, 102);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 18);
+            this.label30.TabIndex = 2;
+            this.label30.Text = "L1:";
+            // 
+            // label31
+            // 
+            this.label31.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label31.Location = new System.Drawing.Point(8, 12);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(483, 59);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Ingrese los Lenguajes para obtener su Diferencia:";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Lenguajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(835, 608);
+            this.Controls.Add(this.pnldif);
+            this.Controls.Add(this.pnlinter);
+            this.Controls.Add(this.pnlunion);
             this.Controls.Add(this.pnlinv);
             this.Controls.Add(this.pnlpot);
             this.Controls.Add(this.pnlcon);
@@ -822,6 +1202,12 @@
             this.pnlpot.PerformLayout();
             this.pnlinv.ResumeLayout(false);
             this.pnlinv.PerformLayout();
+            this.pnlunion.ResumeLayout(false);
+            this.pnlunion.PerformLayout();
+            this.pnlinter.ResumeLayout(false);
+            this.pnlinter.PerformLayout();
+            this.pnldif.ResumeLayout(false);
+            this.pnldif.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -883,5 +1269,32 @@
         private System.Windows.Forms.TextBox txtl1inv;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel pnlunion;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblunion;
+        private System.Windows.Forms.Button btnunion;
+        private System.Windows.Forms.TextBox txtl2uni;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtl1uni;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel pnlinter;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblinter;
+        private System.Windows.Forms.Button btninter;
+        private System.Windows.Forms.TextBox txtl2inter;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtl1inter;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel pnldif;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbldif;
+        private System.Windows.Forms.Button btndife;
+        private System.Windows.Forms.TextBox txtl2dif;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtl1dif;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
     }
 }
